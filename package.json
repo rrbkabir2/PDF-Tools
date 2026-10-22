@@ -1,0 +1,38 @@
+{
+  "name": "local-pdf-toolkit",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "vite build",
+    "test:organize": "node scripts/verify-organize.mjs",
+    "test:edit": "node scripts/verify-edit.mjs",
+    "test:e2e:edit": "node scripts/e2e-edit.mjs",
+    "test:e2e:text": "node scripts/e2e-text.mjs",
+    "test:e2e:images": "node scripts/e2e-images.mjs",
+    "test:e2e:convert": "node scripts/e2e-convert.mjs",
+    "test:optimize": "node scripts/verify-optimize.mjs",
+    "test:e2e:optimize": "node scripts/e2e-optimize.mjs",
+    "test:e2e:pages": "node scripts/e2e-page-picker.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "docx": "^9.13.0",
+    "exceljs": "^4.4.0",
+    "express": "^5.3.0",
+    "jszip": "^3.10.2",
+    "lucide-react": "^0.468.0",
+    "multer": "^2.4.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.4.299",
+    "pptxgenjs": "^4.0.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1",
+    "prettier": "^3.9.10"
+  }
+}

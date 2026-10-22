@@ -1,0 +1,57 @@
+Codex Prompt: Local PDF Toolkit Website
+Prompt (copy everything below into Codex)
+Build a complete PDF toolkit website that runs on localhost only. It should offer all the PDF tools found on iLovePDF, Smallpdf, Sejda and PDF24, with a clean, modern, professional design. Only PDF-related tools, nothing else. Everything runs on my machine and no file is sent to any external service.
+Tech stack
+• Frontend: React with Vite and Tailwind CSS.
+• Backend: Node.js with Express, or Python with FastAPI, whichever handles PDF work best.
+• PDF viewing: PDF.js. PDF editing: pdf-lib. OCR: Tesseract or OCRmyPDF. Compression and conversion: Ghostscript, qpdf, LibreOffice (headless), or similar local tools.
+Design
+• Home page with a grid of tool cards grouped by category, like iLovePDF and Smallpdf, plus a search box to find tools.
+• Each tool has its own page: big drag-and-drop upload area, simple options, a Process button, a progress indicator, and a Download button.
+• Light and dark mode, responsive layout, clear error messages.
+• An in-browser editor page with page thumbnails on the left, the page viewer in the center, and a tools panel on the right.
+Tools to include
+Organize
+• Merge PDFs: combine multiple files, drag to reorder, choose page ranges from each file.
+• Create a new PDF from pages picked out of several PDFs.
+• Split PDF by page range, every N pages, or by bookmarks.
+• Delete pages, extract pages, rotate pages, reorder pages with thumbnails.
+• Add page numbers, headers and footers, and watermarks (text or image).
+• Crop PDF pages and resize page size.
+Edit
+• Edit existing text in place, add new text boxes with font, size and color.
+• Add images, shapes, highlights, underline, strikeout, freehand drawing, and comments.
+• Fill forms, and add signatures (draw, type, or upload an image).
+• Redact: permanently black out and remove selected content.
+• Whiteout and erase areas.
+Text and OCR
+• Copy all text from a document or a single page.
+• OCR for scanned or non-copyable PDFs: run on upload, produce a searchable PDF, and show extractable text.
+• Extract text to a TXT file.
+Images
+• Extract all embedded images and download them individually or as a zip.
+• Crop any area of a page and save it as PNG or JPG.
+• PDF to JPG/PNG, and JPG/PNG to PDF.
+Convert from PDF
+• PDF to Word, Excel, PowerPoint, text, HTML, and PDF/A.
+Convert to PDF
+• Word, Excel, PowerPoint, images, text, and HTML to PDF.
+Optimize and Secure
+• Compress PDF with low, medium and high levels, showing size before and after.
+• Repair damaged PDFs.
+• Password protect, unlock, and set permissions.
+• Flatten PDF, remove metadata, edit metadata.
+• Compare two PDFs and show the differences.
+Storage
+• For now, keep all files local: an uploads folder and an outputs folder, with a simple My Files list in the UI and automatic cleanup of old temporary files.
+• Put storage behind a small interface so cloud storage (Supabase Storage or AWS S3) and user accounts can be added later without rewriting the app.
+How to build it
+• Work in phases and finish each one before the next: (1) project setup and design system, (2) merge, split, organize, (3) editor and text tools, (4) OCR and image tools, (5) conversions, (6) compress and security tools, (7) polish and testing.
+• If a tool needs a system dependency like Ghostscript, LibreOffice or Tesseract, list it clearly in the README with install steps and show a friendly message in the UI if it is missing.
+• Handle large PDFs without freezing the UI.
+• One command to start everything, for example npm run dev, running at http://localhost:3000.
+• No login for now.
+• After each phase, tell me exactly what to run and test.
+Not for now
+• Cloud storage and user accounts.
+• Anything that is not PDF-related.
